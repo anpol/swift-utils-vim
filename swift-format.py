@@ -70,6 +70,7 @@ def main(argc, argv):
         SI.wShowWindow = subprocess.SW_HIDE
 
     command = [binary]
+    command.extend(['-indent-switch-case', '-indent-width', vim.eval('&shiftwidth')])
     if lines != 'all':
         command.extend(['-line-range', lines])
 
